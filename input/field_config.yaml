@@ -1,0 +1,98 @@
+# top level is a series of dashboards
+# The Population Dashboard
+Population: # Each dashboard contains a series of headings
+  # The Language Heading
+  Language: # Each heading contains a series of fields.
+  - name: ENGLISH PROFICIENCY - Percent who speak English proficiently # display name
+    source: [ ACS, ??? ]
+
+  - name: ENGLISH PROFICIENCY - Percent with LIMITED English Proficiency
+    source: [ ACS, ??? ]
+
+  Race/Ethnicity:
+  - name: NATIONAL ORIGIN - Percent Born in USA
+    source: [ ACS, ??? ]
+
+  - name: NATIONAL ORIGIN - Percent Foreign born
+    source: [ ACS, ??? ]
+
+  - name: RACE/ETHNICITY - Percent  Asian
+    source: [ ACS, ??? ]
+
+  - name: RACE/ETHNICITY - Percent Black
+    source: [ ACS, ??? ]
+
+  - name: RACE/ETHNICITY - Percent Hispanic
+    source: [ ACS, ??? ]
+
+  - name: RACE/ETHNICITY - Percent Other
+    source: [ ACS, ??? ]
+
+  - name: RACE/ETHNICITY - Percent White
+    source: [ ACS, ??? ]
+    
+Social Factors:
+  Education:
+  - name: EDUCATION - Percent Associate's Degree
+    source: [ ACS, ??? ]
+
+  - name: EDUCATION - Percent Bachelor's degree
+    source: [ ACS, ??? ]
+
+  - name: EDUCATION - Percent Graduate or professional degree
+    source: [ ACS, ??? ]
+
+  - name: EDUCATION - Percent High school graduate
+    source: [ ACS, ??? ]
+
+  - name: EDUCATION - Percent No High School Diploma
+    source: [ ACS, ??? ]
+
+  - name: EDUCATION - Percent Some college, no degree
+    source: [ ACS, ??? ]
+
+  Income Inequality:
+  - name: INCOME - Percent of Households with Incomes $10,000 to $14,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $100,000 to $149,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $15,000 to $24,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $150,000 to $199,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $200,000 or more"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $25,000 to $34,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $35,000 to $49,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $50,000 to $74,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes $75,000 to $99,999"
+    source: [ ACS, ??? ]
+
+  - name: INCOME - Percent of Households with Incomes Less than $10,000"
+    source: [ ACS, ??? ]
+  Poverty:
+  - name: Poverty Rate (All Ages)
+    source: [ ACS, ??? ]
+
+  - name: Poverty Rate (Black)
+    source: [ ACS, ??? ]
+
+  - name: Poverty Rate (Children)
+    source: [ ACS, ??? ]
+
+  - name: Poverty Rate (Hispanic)
+    source: [ ACS, ??? ]
+
+  - name: Poverty Rate (White)
+    source: [ ACS, ??? ]

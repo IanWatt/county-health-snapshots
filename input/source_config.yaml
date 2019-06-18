@@ -1,0 +1,3 @@
+- alias: ACS
+  description: American Community Survey 5-Year Estimates (2016)
+  url: https://api.census.gov/data/2016/acs/acs5/subject?get=NAME,S0101_C01_001E&for=county:*&in=state:48&key=CENSUS_API_KEY
