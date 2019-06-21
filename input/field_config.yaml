@@ -4,95 +4,112 @@ Population: # Each dashboard contains a series of headings
   # The Language Heading
   Language: # Each heading contains a series of fields.
   - name: ENGLISH PROFICIENCY - Percent who speak English proficiently # display name
-    source: [ ACS, ??? ]
+    # inverse of value
+    source: [ ACS_PROFILE, INVERT:DP02_0113PE ]
 
   - name: ENGLISH PROFICIENCY - Percent with LIMITED English Proficiency
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0113PE ]
 
   Race/Ethnicity:
   - name: NATIONAL ORIGIN - Percent Born in USA
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0088PE ]
 
   - name: NATIONAL ORIGIN - Percent Foreign born
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0092PE ]
 
-  - name: RACE/ETHNICITY - Percent  Asian
-    source: [ ACS, ??? ]
+  - name: RACE/ETHNICITY - Percent Asian
+    source: [ ACS_PROFILE, DP05_0044PE ]
 
   - name: RACE/ETHNICITY - Percent Black
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP05_0038PE ]
 
   - name: RACE/ETHNICITY - Percent Hispanic
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP05_0070PE ]
 
   - name: RACE/ETHNICITY - Percent Other
-    source: [ ACS, ??? ]
+    source: [
+      ACS_PROFILE,
+      # aggreate multiple fields: AIAN, NHPI, Other
+      SUM:DP05_0039PE:DP05_0052PE:DP05_0057PE
+    ]
 
   - name: RACE/ETHNICITY - Percent White
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP05_0037PE ]
     
 Social Factors:
   Education:
   - name: EDUCATION - Percent Associate's Degree
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0063PE ]
 
   - name: EDUCATION - Percent Bachelor's degree
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0064PE ]
 
   - name: EDUCATION - Percent Graduate or professional degree
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0065PE ]
 
   - name: EDUCATION - Percent High school graduate
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0066PE ]
 
   - name: EDUCATION - Percent No High School Diploma
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0060PE ]
 
   - name: EDUCATION - Percent Some college, no degree
-    source: [ ACS, ??? ]
+    source: [ ACS_PROFILE, DP02_0062PE ]
 
   Income Inequality:
-  - name: INCOME - Percent of Households with Incomes $10,000 to $14,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes Less than $10,000
+    source: [ ACS_PROFILE, DP03_0052PE ]
 
-  - name: INCOME - Percent of Households with Incomes $100,000 to $149,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $10,000 to $14,999
+    source: [ ACS_PROFILE, DP03_0053PE ]  
 
-  - name: INCOME - Percent of Households with Incomes $15,000 to $24,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $15,000 to $24,999
+    source: [ ACS_PROFILE, DP03_0054PE ]
 
-  - name: INCOME - Percent of Households with Incomes $150,000 to $199,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $25,000 to $34,999
+    source: [ ACS_PROFILE, DP03_0055PE ]
 
-  - name: INCOME - Percent of Households with Incomes $200,000 or more"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $35,000 to $49,999
+    source: [ ACS_PROFILE, DP03_0056PE ]
 
-  - name: INCOME - Percent of Households with Incomes $25,000 to $34,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $50,000 to $74,999
+    source: [ ACS_PROFILE, DP03_0057PE ]
 
-  - name: INCOME - Percent of Households with Incomes $35,000 to $49,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $75,000 to $99,999
+    source: [ ACS_PROFILE, DP03_0058PE ]
 
-  - name: INCOME - Percent of Households with Incomes $50,000 to $74,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $100,000 to $149,999
+    source: [ ACS_PROFILE, DP03_0059PE ]
 
-  - name: INCOME - Percent of Households with Incomes $75,000 to $99,999"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $150,000 to $199,999
+    source: [ ACS_PROFILE, DP03_0060PE ]
 
-  - name: INCOME - Percent of Households with Incomes Less than $10,000"
-    source: [ ACS, ??? ]
+  - name: INCOME - Percent of Households with Incomes $200,000 or more
+    source: [ ACS_PROFILE, DP03_0061PE ]
+  
   Poverty:
   - name: Poverty Rate (All Ages)
-    source: [ ACS, ??? ]
+    source: [ ACS_SUBJECT, S1701_C03_001E ] # people, not family rate
 
   - name: Poverty Rate (Black)
-    source: [ ACS, ??? ]
+    source: [ ACS_SUBJECT, S1701_C03_014E ]
 
   - name: Poverty Rate (Children)
-    source: [ ACS, ??? ]
+    source: [ ACS_SUBJECT, S1701_C03_002E ]
 
   - name: Poverty Rate (Hispanic)
-    source: [ ACS, ??? ]
+    source: [ ACS_SUBJECT, S1701_C03_020E ]
 
   - name: Poverty Rate (White)
-    source: [ ACS, ??? ]
+    source: [ ACS_SUBJECT, S1701_C03_021E ] # White alone not hispanic or Latino
+
+Access to Care:
+  Uninsured:
+    - name: UNINSURED - Adults (Age 18-64)
+      source: [ ACS_SUBJECT, S2701_C05_012E ]
+
+    - name: UNINSURED - Children (Age 0-18)
+      source: [ ACS_SUBJECT, S2701_C05_011E ]
+
+    - name: UNINSURED - Children and Adults (Age 0-64) 
+      source: [ ACS_SUBJECT, S2701_C05_001E ]
